@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movies_app/MyTheme.dart';
 import 'package:movies_app/ui/home_screen.dart';
+import 'package:movies_app/ui/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,9 +21,10 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          initialRoute: HomeScreen.routeName,
+          initialRoute: SplashScreen.routeName,
           routes: {
             HomeScreen.routeName: (_) => HomeScreen(),
+            SplashScreen.routeName: (_) => SplashScreen()
           },
           theme: MyTheme.theme,
         );
